@@ -1,0 +1,19 @@
+div{
+		color: white;
+		background-color: blue;
+		width: 200px;
+		height: 50px;
+		margin:20px; /* 블록밖 상하좌우 20px 씩 떨어뜨리기 */
+		padding:20px;
+		vertical-align: middle;
+		text-align: center;
+	}
+	span{
+		background-color: cyan;
+		width:1000px;	/* 너비와 높이를 지정해도 의미가 없음 */
+		height:20px;
+		margin:20px; /* 인라인 태그는 margin이 좌우 밖에 안된다 */
+		padding:20px;
+		vertical-align: middle;
+		text-align: center;
+	}

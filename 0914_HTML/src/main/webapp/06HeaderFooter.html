@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Header & Footer</title>
+</head>
+<body>
+
+<!-- 
+	<header> 태그는 소개 및 탐색에 도움을 주는 컨텐츠를 나타내고 제목, 로고, 검색 폼, 작성자 이름등의 요소도 포함할 수 있다.
+	<header> 내부에 다른 <header> 또는 <footer> 를 넣을 수 없다.
+	<address> 내부에도 <header>를 넣을 수 없다.
+	<div>는 영역을 잡을때(분리할 때) 주로 사용
+ -->
+
+	<header>
+		<div class="container">
+			<!-- class 속성은 띄어쓰기로 여러 클래스를 동시에 사용할 수 있다. -->
+			<!-- 아래는 <div class="container-left" class="clearfix"> 와 같다 -->
+			<div class="container-left clearfix">
+				<div class="logo">
+					<img alt="No imgae" src="html_logo.png" width="50px">
+					<!-- 높이 너비중 한개만 지정하면 같은 비율로 같이 바뀜 -->
+				</div>
+				<ul class="menu clearfix">
+					<li class="menu-item">HTML</li>
+					<li class="menu-item">CSS</li>
+					<li class="menu-item">JavsScript</li>
+					<li class="menu-item">JQuery</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<!-- 
+	<footer> 태그는 일반적으로 작성자, 저작권 정보
+	 -->
+	<footer>
+	&copy
+	</footer>
+</body>
+</html>

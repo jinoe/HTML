@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	<canvas> 태그는 javascript를 이용해 그래픽을 표시한다.
+	width 속성은 캔버스의 너비를 지정한다.
+	height 속성은 캔버스의 높이를 지정한다.
+ -->
+ 
+ 	<canvas id="canvas" width="700" height="700"></canvas>
+ 	
+ 	<script type="text/javascript">
+//		id속성이 canvas인 캔버스 객체를 얻어온다.
+		var a = 10;
+		console.log(a);
+		
+		var a = "abc";
+		console.log(a);
+		
+//		let은 한번 선언한 변수를 같은 이름으로 다시 선언할 수 없다.
+//		이미 만든 변수를 재선언 하는 것을 방지
+		//let a = "abc"; 
+		//console.log(a);
+		
+//		const 는 값이 바뀌는것을 허용하지않고 중복선언 또한 허용하지 않음
+		const canvas = document.getElementById("canvas")	// Window.documont 객체
+		const ctx = canvas.getContext('2d');
+//		rgb(red,green,blue,aplha) 색상을 만드는 함수, alpha는 투명도값(생략가능) 기본값은 1이고 완전 불투명을 의미한다.	
+		ctx.fillStyle = 'rgb(200,0,0);'
+		ctx.fillRect(10,10,500,500);
+		
+		ctx.fillStyle = 'rgb(0,0,200,0.5);'
+		ctx.fillRect(100,100,500,500);
+		
+ 	</script>
+</body>
+</html>

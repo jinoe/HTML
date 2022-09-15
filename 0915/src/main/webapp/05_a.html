@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>a</title>
+
+<style type="text/css">
+/*  <a> 태그를 버튼처럼 보이게 하는 방법	*/
+	a.btn {
+		font-weight: bold;
+		border: 1px solid blue;
+		border-radius: 10px;
+		text-decoration: none;
+		
+	/* <a>태그는 인라인 요소이기 때문에 크기가 안바뀜 */
+		display: inline-block;	/* inline 처럼 줄바꿈없이 사용하되 block 처럼 크기와 너비를 지정할 수 있게 해준다. */
+		width:150px;
+		height:50px;
+		
+		text-align: center;
+		line-height:50px;	/* 줄 높이 */
+		
+		margin:10px;
+		background-color: yellow;
+	}
+	
+	a {
+		color:black;
+	}
+	a:hover	{
+		background-color: green;
+	}
+</style>
+
+</head>
+<body>
+<!-- 
+	<a> 태그는 href 속성을 통해 다른 페이지나 같은 페이지의 특정 위치(책갈피, 북마크)로 연결하는 하이퍼링크를 만든다.
+ 	target 속성으로 연결되는 페이지가 표시되는 위치를 지정할 수 있다. 
+ 	_self(기본값, 현재창)
+ 	_blank
+ 	
+ 	href => html, img파일, #id, url
+ 	download 속성으로 htm, img 파일을 다운로드 할 수 있다.
+ 	
+ 	style의 text-decration: none 으로 밑줄 설정가능
+ 	
+ -->
+ 
+ 	<a class="btn" href="https://www.google.com" target="_self">Google</a>
+ 	<a class="btn" href="https://www.google.com" target="_blank">Google</a>
+ 	<a class="btn" href="https://www.google.com" download target="_blank">Google</a>
+ 	<a class="btn" href="04_blockquote.html">HTML</a>
+ 	<a class="btn" href="04_blockquote.html" download>HTML</a>
+ 	<a class="btn" href="html_logo.png">IMG</a>
+ 	<a class="btn" href="html_logo.png" download>IMG</a>
+ 	
+ 	<div id="contents">
+ 		목차
+ 		<ul>
+ 		<!-- #: 해쉬, id앞에 붙여준다. -->
+ 			<li><a href="#title1">제목1</a></li>
+ 			<li><a href="#title2">제목2</a></li>
+ 		</ul>
+ 	</div>
+ 	
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	
+ 	<h2 id="title1"><a href="#contents">제목1</a></h2>
+ 	
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 	
+ 	<h2 id="title2"><a href="#contents">제목2</a></h2>
+
+</body>
+</html>

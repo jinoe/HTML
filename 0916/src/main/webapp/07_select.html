@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+input {
+	width: 70px;
+	background-color: yellow;
+	border: 1px solid gray;
+	border-radius: 5px;
+	font : italic bold;
+}
+</style>
+
+</head>
+<body>
+	<!-- 
+	<select> 태그는 옵션 메뉴(콤보 상자, 리스트 상자)를 만든다.
+	<option> 태그를 이용해서 선택할 수 있는 옵션 목록을 만든다.
+	<select> 태그의 너비는 가장 긴 텍스트를 입력한 <option> 태그에 맞춰서 자동으로 조절된다.
+	<select> 태그의 너비를 지정하고 싶다면 style="width:200px" 스타일을 사용한다.
+	<select> 태그에 size 속성으로 표시되는 목록의 개수를 정할 수 있다.
+	size 속성에서 지정한 개수보다 <option> 태그가 많으면 스크롤바가 표시된다.
+ -->
+	<!-- 콤보상자 -->
+
+	<form action="?" method="get">
+		먹고 싶은 과일은?<br> <select name="fruit" style="width: 200px;">
+			<option>Apple</option>
+			<option>Banana</option>
+			<option>Orange</option>
+			<option>Mango</option>
+			<option>Melon</option>
+			<option>Water Melon</option>
+		</select> <br /> 
+		
+		먹고 싶은 과일은?<br> 
+		<select name="fruit" style="width: 200px;">
+			<option>Apple</option>
+			<option>Banana</option>
+			<option>Orange</option>
+			<option>Mango</option>
+			<option>Melon</option>
+			<option selected="selected">Water Melon</option>
+			<!-- selected 속성으로 기본 선택값을 설정할 수 있다. -->
+		</select> <br /> 
+		
+		먹고 싶은 과일은?<br> 
+		<select name="fruit" style="width: 200px;"
+			multiple="multiple" size="6">
+			<!-- multiple 속성으로 옵션들을 펼쳐 표시한다. -->
+			<option>Apple</option>
+			<option>Banana</option>
+			<option>Orange</option>
+			<option>Mango</option>
+			<option>Melon</option>
+			<option selected="selected">Water Melon</option>
+		</select> 
+		<br>
+		
+		먹고 싶은 과일은?<br> 
+		<select name="fruit" style="width: 200px;">
+			<optgroup label="과일1">
+				<option>Apple</option>
+				<option>Banana</option>
+				<option>Orange</option>
+			</optgroup>
+			<optgroup label="과일2">
+				<option>Mango</option>
+				<option>Melon</option>
+				<option>Water Melon</option>
+				<!-- selected 속성으로 기본 선택값을 설정할 수 있다. -->
+			</optgroup>
+			
+		
+		</select> 
+		<br>
+		
+<!-- 
+	<datalist> 태그는 다른 컨트롤에서 선택할 수 있는 요소를 만든다.
+	다른 컨트롤에 list 속성으로 <datalist>의 id와 연결한다.
+ -->
+		먹고 싶은 과일은?<br> 
+		
+		<input type="text" name="fruit" list="fruits">
+		
+		<datalist id="fruits">
+			multiple="multiple" size="6">
+			<!-- multiple 속성으로 옵션들을 펼쳐 표시한다. -->
+			<option>Apple</option>
+			<option>Banana</option>
+			<option>Orange</option>
+			<option>Mango</option>
+			<option>Melon</option>
+			<option selected="selected">Water Melon</option>
+		</datalist>
+		
+		
+		<br/> 
+		
+		<input type="submit">
+	</form>
+</body>
+</html>

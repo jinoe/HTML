@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상클래스 선택자</title>
+
+<style type="text/css">
+
+/*	":" 이 가상 클래스 선택자 이다.
+	
+	많이 쓰는 2가지
+	hover: 선택자에 마우스 포인터가 올라가 있는 동안에만 선택된다.
+	active: 선택자를 마우스로 누르고 있는 동안에만 선택된다.
+	focus: 선택자가 포터스 된 동안에만 선택된다.
+	focus는 대화형 컨텐츠 (input, img, tabindex)에서 사용이 가능하다.
+*/
+
+	/* hover */
+	a:hover {
+		color:lime;
+		font-weight: bold;
+		font-size: 20pt;
+		text-decoration: none;
+	}
+	
+	.box1 {
+		width:100px;
+		height:100px;
+		background-color: cyan;
+	}
+	.box1:hover {
+		width:200px;
+		/* transition: 1s;  애니메이션 실행시간 (단축속성) */
+		transition-duration: 1s;	/* 일반속성 */
+	}
+	/* active */
+	.box2 {
+		width:100px;
+		height:100px;
+		background-color: lime;
+	}
+	.box2:active {
+		width:200px;
+		/* transition: 1s;  애니메이션 실행시간 (단축속성) */
+		transition-duration: 1s;	/* 일반속성 */
+	}
+	
+	/* focus */
+	input {
+		width: 100px;
+		background-color: hotpink;
+		/* input 태그는 outline으로 선의 외각선이 들어간다. */
+		/* input 태그의 border 외곽선을 설정한다. => border 바깥에 outline 선이 하나 더있다. 
+		input이 focus 된 상태에서 테두리가 검게 선택되는 효과를 없앤다. 
+		outline: dashed, none,... ;
+		*/
+		outline: none;
+		
+		padding:5px; /* padding으로 글씨가 여유있게 할수 있다. */
+	}
+	input:focus{
+		width:200px;
+		background-color: yellowgreen;		
+		border: 2px solid blue;
+	}
+	.fruit > li{ /* 자식 선택자 */
+		width:200px;
+		background-color: yellowgreen;
+		border: 3px solid blue;
+	}
+	/* first-child: 선택자의 형제 요소중 첫번째 요소면 선택한다. */
+	.furit > li:first-child {
+		color:red;
+	}
+	/* last-child: 선택자의 형제 요소중 마지막 요소면 선택한다. */
+	.fruit > li:last-child {
+		color: blue;
+}
+</style>
+</head>
+<body>
+
+	<a href="https://www.google.com">구글</a>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<input type="text">
+	
+	<ul class="fruit">
+		<li>딸기</li>
+		<li>사과</li>
+		<li>오렌지</li>
+		<li>망고</li>
+	</ul>
+	
+</body>
+</html>

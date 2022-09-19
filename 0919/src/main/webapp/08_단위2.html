@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>단위2</title>
+
+<style type="text/css">
+	
+/* 		px : 픽셀, 고정크기
+		% : 비율, 부모요소의 영향을 받는다.
+		em : 자기 자신의 폰트 크기의 영향을 받는다. (배수 단위)
+		rem(root em) : 가장 조상요소(html 태그)의 폰트 크기에 영향을 받는다.
+ */
+ 
+ 	body * {
+ 		border: 2px solid red;
+ 	}
+ 	.container {
+ 		font-size : 10px;
+ 		/*width : 600px;*/
+		/* container 클래스의 font-size의 60배 */
+		width:60em;
+ 	}
+ 	.parent {
+ 		/* font-size는 상속받음 */
+ 		font-size: 2em;		/* 20px */
+ 		width: 15em;		/* 20x15=300px */
+ 	}
+ 	.child {
+ 		width: 30rem;	/* 300px */
+ 	}
+ 	html {
+ 		font-size: 10px;
+ 	}
+ 	
+</style>
+
+</head>
+<body>
+	<div class="container">
+	Container
+		<div class="parent">
+			Parent
+			<div class="child">Child</div>
+			</div>
+	</div>
+</body>
+</html>

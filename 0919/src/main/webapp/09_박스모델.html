@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스 모델</title>
+<style type="text/css">
+
+	div {
+		/* width: auto를 사용하면 기본값이 100%다 */
+		/* height: auto / block요소에 auto를 사용하면 기본값이 0 이다 */
+		width: 200px;
+		height:100px;
+		background-color: blue;
+	}
+	
+	span {
+		/* width: auto / Inline 요소의 width를 auto를 사용하면 기본값이 0 이다 */
+		/* height: auto / Inline요소의 height를 auto를 사용하면 기본값이 0 이다 */
+		width: 100px;
+		height:100px;
+		background-color: aqua;
+		
+		display : block;
+	}
+</style>
+
+</head>
+
+<body>
+
+<!--	width: 가로 너비
+		height: 세로 너비
+		auto: 브라우저가 너비를 계산해서 오른쪽 왼쪽 너비를 동일하게 한다. => 요소를 가운데 배치한다.
+-->
+	<div></div>
+	<span>span</span>
+</body>
+</html>

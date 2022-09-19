@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우선순위</title>
+<!-- 
+		우선순위에는 "중요도","명시도", "선언순서"의 개념이 있다.
+		1. 가장중요(!important) : 모든 선언을 무시하고 가장 우선된다. 점수: 무한대
+		2. 인라인 (Inline) 점수: 1000점
+		3. 아이디 (ID selector) 점수: 100점
+		4. 클래스(class selector) 점수 : 10점
+		5. 태그 (type selector) 점수: 1점
+		6. 전체(universal selector) 점수: 0점
+		7. 상속(css inheritance) 점수: 계산하지 않음
+		
+		점수 계산연습
+		.list li.item => .class tag.class => 21
+		.list li:hover => .class tag:가상Class => 21
+		.box::before => .class::가상요소(tag) => 11
+		#submit span => #id tag => 101
+		header .menu li:nth-child(2) => tag .class tag:가상 클래스 => 22
+		h1 => tag => 1
+		:not(.box) => 가상class(.class) => 10 점
+		:not(span) => 가상class(tag) => 1 점
+		
+ -->
+<style type="text/css">
+	
+	div {
+		color: blue 
+		!important;		/* 첫 줄 바로 다음에선언 */
+		font-size: 20pt;
+		font-weight: bold;
+	}
+
+	#color_yellow {  /* 3. 아이디 */
+		color : yellow;
+	}
+
+	.color_green {	/* 4. 클래스 */
+		color:green;
+	}
+	
+	div { /* 5. 태그 */
+		color:hotpink;
+	}
+	* {	/* 6. 전체 */
+		color : tomate;
+	}
+	body{	/* 7. 상속 */
+		color:violet;
+	}
+</style>
+</head>
+<body>
+	<div id="color_yellow" class="color_green" style="color:orange">hello world!!</div>		<!-- 2. 인라인 방식 -->
+</body>
+</html>

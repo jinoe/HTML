@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소 정렬</title>
+
+<style type="text/css">
+
+/* 		float 해제
+		float 속성이 적용된 요소의  주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위해 float 속성을 해제 해야한다.
+		1. 형제 요소에 clear: left, clear: right 를 추가해서 해제한다.
+	
+
+ */
+ 	.box1 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: tomato;
+ 		
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center; 		
+ 		
+ 		float: left;
+ 	
+ 	}
+ 	
+ 	.box2 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: tomato;
+ 		
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center;
+ 		
+ 		 
+ 		clear: left;	/* float 해제 */
+ 	}
+ 	
+ 	.box3 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: skyblue;
+ 		
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center;
+ 		
+ 		 
+ 		float: right;
+ 		
+ 	}
+	
+	.box4 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: skyblue;
+ 		
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center;
+ 		
+ 		 
+ 		clear: both;	/* float 일괄해제 (귀찮으면 이걸로) */
+ 	}
+ /* ----------------------------------------- */
+ 	.float-box1 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: pink;
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center;
+ 		
+		float: left; 		 
+ 	}
+ 	.new-box1 {
+ 		width: 700px;
+ 		height: 30px;
+ 		background-color: cornsilk;
+ 		
+ 	}
+ 	.clearfix1 {
+ 		overflow: hidden;
+ 		/* overflow: auto; */
+ 	}
+ 	
+ /* ----------------------------------------- */ 	
+  	.float-box2 {
+ 		width: 150px;
+ 		height: 100px;
+ 		background-color: gold;
+ 		color : #FFFFFF;
+ 		margin:10px;
+ 		text-align: center;
+ 		
+		float: left; 		 
+ 	}
+ 	.new-box2 {
+ 		width: 700px;
+ 		height: 30px;
+ 		background-color: burlywood;
+ 		
+ 	}
+ 	.clearfix2::after { /* 가상요소 선택자를 이용하여 clear:both 인 content를 추가해준다. */
+ 		content:"";
+ 		clear:both;
+ 		display: block;
+ 		/* overflow: hidden; */
+ 		/* overflow: auto; */
+ 	}
+ 	 	
+</style>
+
+</head>
+<body>
+	<div class="box1">1</div>
+	<div class="box1">2</div>
+	<div class="box1">3</div>
+	<div class="box2">4</div>	<!-- float 해제 -->
+	
+	<div class="box3">1</div>
+	<div class="box3">2</div>
+	<div class="box3">3</div>
+	<div class="box4">4</div>	<!-- float 해제 -->
+	
+	<!-- 📌 float 속성의 문제점
+: 모든 자식 요소에 float 속성을 적용하면, 부모 요소는 해당 자식 요소가 존재하지 않는 것으로 판단하여, (부모가) 높이를 인식하지 못하는 문제가 발생함 -->
+	<!-- 가장 간단하고 방법은 [ 해결법 1 ]로 자식 요소에 float 속성을 넣은 다음, 부모 요소에 "overflow: hidden;"만 추가하면 된다! -->
+	<div class="clearfix1">
+		<div class="float-box1">1</div>
+		<div class="float-box1">2</div>
+		<div class="float-box1">3</div>
+		<div class="float-box1">4</div>
+	</div>
+	<div class="new-box1"></div>		<!-- 형제태그의 자식과의 float 속성을 해제  -->
+	
+	
+	<div class="clearfix2">
+		<div class="float-box2">1</div>
+		<div class="float-box2">2</div>
+		<div class="float-box2">3</div>
+		<div class="float-box2">4</div>
+	</div>
+	<div class="new-box2"></div>		<!-- 형제태그의 자식과의 float 속성을 해제  -->
+</body>
+</html>

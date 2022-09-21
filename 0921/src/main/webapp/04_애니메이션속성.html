@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션 속성</title>
+
+<style type="text/css">
+
+	.box {
+		width: 100px;
+		height: 100px;
+		background-color: skyblue;
+		border-radius: 10px;		
+	}
+	
+	.box:hover {
+		/* animation: ani 2s; */
+		animation-name: ani;
+		animation-duration: 2s;		/* ms단위면 1/1000초 단위로 애니메이션을 지정할 수 있다. */
+	}
+	
+	@keyframes ani {
+		0% {
+			width:100px;
+			
+		}
+		50% {
+		
+		}
+		100% {
+		
+		}
+	}
+</style>
+
+</head>
+<body>
+	<div class="hover">
+	
+	</div>
+</body>
+</html>

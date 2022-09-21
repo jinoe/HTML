@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션</title>
+
+<style type="text/css">
+
+/* 
+		animation: 요소에 애니메이션을 설정 및 제어한다.
+		
+		단축 속성
+		animation: 애니메이션이름 재생시간 [타이밍함수 대기시간 반복횟수 반복방향 전후상태]
+		
+		개별 속성
+		animation-name : @keyframes로 만드는 애니메이션 규칙의 이름일 지정.
+		animation-duration : 애니메이션 재생시간, 0s 가 기본값
+		animation-timing-function : 타이밍 함수 ease가 기본값
+		animation-delay : 애니메이션의 대기시간, 0s가 기본값
+		animation-interation-count: 반복횟수, 기본값 1
+		animation-direction : 애니메이션 반복방향 설정, normal이 기본값
+		animation-fill-mode : 애니메이션 전후 상태(위치)를 설정, none이 기본값
+		animation-play-state : 애니메이션의 재생과 정지를 설정한다. running이 기본값
+ */
+
+	.box {
+		width:100px;
+		height:100px;
+		background-color: pink;
+	}
+	.box:hover {
+		/* fisrt-animation 이라는 이름의 애니메이션을 2초간 무한대로 왕복 재생한다. */
+		/* 단축속성중 애니메이션 이름과 실행시간은 필수. */
+		/* 기존 애니메이션 속성과 다른점은 마우스를 떼었을때 다시 1s 동안 원래 상태로 돌아오는 애니메이션을 설정 할 수 있다. */
+		animation: first-animation 1s infinite alternate;
+	}
+	
+	/* 실행할 애니메이션을 만든다. */
+	/* @keyframes를 사용해서 애니메이션을 설정한다. 반드시 애니메이션의 이름을 지정해야 한다. */
+	@keyframes first-animation {
+		/* 프레임 단위(전체 실행시간의%)로 애니메이션을 설정한다.
+		0% : 시작
+		100% : 끝
+		 */
+		0% {
+			width:100px;
+		}
+		100% {
+			width:500px;
+		}
+	}
+	
+</style>
+
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

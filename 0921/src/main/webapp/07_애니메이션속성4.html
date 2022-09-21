@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 
+		animation-fill-mode: 애니메이션 전 후 상태(위치)를 설정한다.
+			=> none: 기본값, 기존 위치에서 시작 => 애니메이션 시작 위치로 이동 => 실행 => 기존 위치로 복귀
+			=> fowards: 기존위치에서 시작 => 애니메이션 시작위치로 이동 => 실행 => 애니메이션 끝 위치에서 끝
+			=> backwards: 애니메이션 시작위치에서 시작=> 실행 => 기존위치에서 끝
+			=> both: 애니메이션 시작위치에서 시작 => 실행 => 애니메이션 끝 위치에서 끝
+			
+ */			
+
+	.box {
+		width:100px;
+		height:100px;
+		background-color: skyblue;
+		border-radius: 10px;
+		margin: 10px;
+		
+	}
+	.box:hover{	
+		animation : move 2s;
+		animation-fill-mode: backwards;
+	}
+	
+	@keyframes move {
+		
+		0% {
+			transform: translate(200px,200px);
+			background-color: green;
+		}
+		100%{
+			transform: translate(300px,300px);
+			background-color: red;
+		}
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
